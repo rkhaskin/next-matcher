@@ -15,11 +15,10 @@ export const RegisterForm = () => {
     formState: { errors, isValid, isSubmitting },
     setError,
   } = useForm<RegisterSchema>({
-    //resolver: zodResolver(registerSchema),
+    resolver: zodResolver(registerSchema),
     mode: "onTouched",
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmitHandler = async (data: RegisterSchema) => {
     const result = await registerUser(data);
 
