@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .active {
+    @apply text-yellow-200 text-[110%];
+  }
+
+  .vertical-center {
+    height: calc(100vh - 64px);
+  }
+}
